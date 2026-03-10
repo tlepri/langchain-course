@@ -25,7 +25,7 @@ def search(query: str) -> str:
 
 llm = ChatOpenAI(model="gpt-4o-mini")
 tools = [search]#
-#tools = [TavilySearch()] this is its own tool to be used as a tool 
+#tools = [TavilySearch()] this is its own tool to be used as a tool, using this delete @tool decorator and the search function 
 agent = create_agent(model=llm, tools=tools)
 
 
